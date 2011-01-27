@@ -26,6 +26,7 @@ Current Status
 
 Todos
 -----
+# write specs/tests for cuke4jas itself!
 # move the code into its own namespace/class
 # check jasmine code for style and idioms
 # check how plugins/addons work in jasmine, and change code accordingly if required
