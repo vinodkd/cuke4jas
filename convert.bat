@@ -1,5 +1,5 @@
 @echo off
-rem converts cucumber feature specs to jasmine templates [or specs - tbd]
+rem converts Cucumber feature specs to jasmine templates [or specs - tbd]
 rem Usage: convert input.feature output.js
 
 set jsengine_home=C:\vinod\installed\rhino1_7R2\rhino1_7R2
