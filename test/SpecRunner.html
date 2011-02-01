@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner for cuke4jas</title>
+  <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.1/jasmine.css">
+  <script type="text/javascript" src="lib/namespacedotjs/Namespace.js"></script>
+
+
+  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine.js"></script>
+  <script type="text/javascript" src="lib/jasmine-1.0.1/jasmine-html.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="lib/jasmine-species-0.8.5b/jasmine-be-calm.css">
+	<script type="text/javascript" src="lib/jasmine-species-0.8.5b/jasmine-grammar.js"></script>
+	<script type="text/javascript" src="lib/jasmine-species-0.8.5b/jasmine-reporting.js"></script>
+
+	<script type="text/javascript">
+		Namespace.use('jasmine.grammar.FeatureStory.*');
+		Namespace.use('jasmine.grammar.GWT.*');
+		Namespace.use('jasmine.grammar.Meta.*');
+	</script>
+
+  <!-- include source files here...-->
+  <script type="text/javascript" src="../lib/cuke4jas.js"></script>
+  
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="cuke4jas-jasmine.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var jasmineEnv = jasmine.getEnv();
+	var styledReporter = new jasmine.reporting.StyledHtmlReporter();
+
+	jasmineEnv.addReporter(styledReporter);
+
+
+	window.onload = function() {
+			jasmineEnv.execute();
+	}
+
+</script>
+
+</body>
+</html>
