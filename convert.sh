@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # converts cucumber feature specs to jasmine templates [or specs]
 # Usage: convert [-s] input.feature output.js
 
