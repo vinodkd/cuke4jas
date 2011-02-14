@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Jasmine Test Runner for cuke4jas</title>
+  <title>cuke4jas Test Runner for cuke4jas</title>
   <link rel="stylesheet" type="text/css" href="lib/jasmine-1.0.1/jasmine.css">
   <script type="text/javascript" src="lib/namespacedotjs/Namespace.js"></script>
 
@@ -24,21 +24,16 @@
   <script type="text/javascript" src="../lib/cuke4jas.js"></script>
   
   <!-- include spec files here... -->
-  <script type="text/javascript" src="cuke4jas-jasmine-bootstrap.js"></script>
-
+  <!-- <script type="text/javascript" src="cuke4jas-jasmine-bootstrap.js"></script> -->
+  <script type="text/javascript" src="cuke4jas_steps.js"></script>
+  <link id="feature" rel="" type="text/css" href="cuke4jas.feature"/>
 </head>
 <body>
 
 <script type="text/javascript">
 
-	var jasmineEnv = jasmine.getEnv();
-	var styledReporter = new jasmine.reporting.StyledHtmlReporter();
-
-	jasmineEnv.addReporter(styledReporter);
-
-
 	window.onload = function() {
-			jasmineEnv.execute();
+			cuke4jas.execute();
 	}
 
 </script>
