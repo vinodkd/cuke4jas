@@ -13,6 +13,8 @@ Using cuke4jas as a tool to start off your cuke-jasmine bdd spec
       -s outputs a jasmine spec that uses step definitions for the GWT steps
     
 the .bat is if you want to run the converter in windows. I've found, however, that Portable Git provides a sufficiently capable bash under Windows to negate need for this.
+
+See test/cuke4jas-jasmine-nosteps.js and test/cuke4jas-jasmine-withsteps.js for sample output.
     
 Using cuke4jas directly in jasmine with step definitions
 ----------------------------------------------------------
@@ -29,6 +31,8 @@ Using cuke4jas directly in jasmine with step definitions
 * load up the feature file, and pass it to cuke4jas by defining a link element with the location of the feature spec as its href. 
   * it now creates a jasmine spec on the fly and maps text to functions in the steps directory similar to cucumber and executes the spec
 
+See test/features/cuke4jas.feature and test/features/steps/cuke4jas_steps.js for sample specs. This is also cuke4jas's test spec.
+_
 Current Status
 --------------
 - 1/26/2011: Rudimentary Tool implemented, seems to parse sample cuke specs just fine.
