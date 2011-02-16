@@ -8,11 +8,10 @@ It can be used in two modes:
 
 Using cuke4jas as a tool to start off your cuke-jasmine bdd spec
 ---------------------------------------------------------------
-    convert.[bat] [-s] input.feature output.js
+    convert[.bat] [-s] input.feature output.js
       -s outputs a jasmine spec that uses step definitions for the GWT steps
     
     the .bat is if you want to run the converter in windows. I've found, however, that Portable Git provides a sufficiently capable bash under Windows to negate need for this.
-    Its provided as-is.
     
 Using cuke4jas directly in jasmine with step definitions
 ----------------------------------------------------------
@@ -20,6 +19,7 @@ Using cuke4jas directly in jasmine with step definitions
 # create step definitions as javascript functions. put them in a js file somewhere. Eg, a steps.js file.
 # use the cuke4jas specrunner.html. This does the following:
 ## import jasmine
+## import namespace required by jasmine-species
 ## import jasmine-species
 ## import cuke4jas
 ## wire up onload() so jasmine.execute() is called
@@ -29,17 +29,19 @@ Using cuke4jas directly in jasmine with step definitions
 
 Current Status
 --------------
-2/14/2011: Converter working, basic spec-based definitions tested. Major issue is that step definitions and their variables are globals. This will be the next order of things to be fixed.
 1/26/2011: Rudimentary Tool implemented, seems to parse sample cuke specs just fine.
+2/14/2011: Converter working, basic spec-based definitions tested. Major issue is that step definitions and their variables are globals. This will be the next order of things to be fixed.
+2/16/2011: Fixed issues with step definitions. Steps are now scoped by their scenario name, so are no longer have the global name conflict problem.
 
 Todos
 -----
 # write specs/tests for cuke4jas itself! - DONE
 # move the code into its own namespace/class - PARTIALLY DONE
 # change toJasmine() so that it expects calls generated to step definitions to be from a namespace bound by the feature's name (or in general with the enclosing container)
-  currently two steps with the same name in 2 features or scenarios will clash with each other.
+  currently two steps with the same name in 2 features or scenarios will clash with each other. - DONE
 # check jasmine code for style and idioms
 # check how plugins/addons work in jasmine, and change code accordingly if required
-# create the cuke mode  - IN PROGRESS
+# create the cuke mode  - VERSION 1 DONE
 # create github project
 # contact jasmine devs and ask opinion
+# add mode to converter to output blank step definition file. This should be real easy once the AST is in place.
