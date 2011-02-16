@@ -31,9 +31,9 @@ Using cuke4jas directly in jasmine with step definitions
 
 Current Status
 --------------
-- 26/2011: Rudimentary Tool implemented, seems to parse sample cuke specs just fine.
-- 4/2011: Converter working, basic spec-based definitions tested. Major issue is that step definitions and their variables are globals. This will be the next order of things to be fixed.
-- 16/2011: Fixed issues with step definitions. Steps are now scoped by their scenario name, so are no longer have the global name conflict problem.
+- 1/26/2011: Rudimentary Tool implemented, seems to parse sample cuke specs just fine.
+- 2/14/2011: Converter working, basic spec-based definitions tested. Major issue is that step definitions and their variables are globals. This will be the next order of things to be fixed.
+- 2/16/2011: Fixed issues with step definitions. Steps are now scoped by their scenario name, so are no longer have the global name conflict problem.
 
 Todos
 -----
