@@ -8,6 +8,10 @@ if "%1" == "-s" (
 )else (
   set addSteps=
 )
+if not exist %1 (
+  echo %1 does not exist
+  exit /b 1
+)
 set jsengine_home=C:\vinod\installed\rhino1_7R2\rhino1_7R2
 set jsengine_cmd=java -jar "%jsengine_home%\js.jar"
 set jsengine_script=convert.js
