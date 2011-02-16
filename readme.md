@@ -16,8 +16,9 @@ the .bat is if you want to run the converter in windows. I've found, however, th
     
 Using cuke4jas directly in jasmine with step definitions
 ----------------------------------------------------------
-* write your cucumber spec
-* create step definitions as javascript functions. put them in a js file somewhere. Eg, a steps.js file.
+* copy the entire contents of cuke4jas/test into your project's test folder. This will bring in jasmine, namespace and jasmine-species.
+* write your cucumber spec into test/features
+* create step definitions as javascript functions. put them in js files under test/steps.
 * use the cuke4jas specrunner.html. This does the following:
   * import jasmine
   * import namespace required by jasmine-species
@@ -26,7 +27,7 @@ Using cuke4jas directly in jasmine with step definitions
   * wire up onload() so jasmine.execute() is called
 * import the step definitions file into the cuke4jas specrunner.html.
 * load up the feature file, and pass it to cuke4jas by defining a link element with the location of the feature spec as its href. 
-  * it now creates a jasmine spec on the fly and maps text to functions in the step definitions directory similar to cucumber and executes the spec
+  * it now creates a jasmine spec on the fly and maps text to functions in the steps directory similar to cucumber and executes the spec
 
 Current Status
 --------------
@@ -38,6 +39,7 @@ Todos
 -----
 * write specs/tests for cuke4jas itself! - DONE
 * move the code into its own namespace/class - PARTIALLY DONE
+* rewrite parse logic to use an AST.
 * change toJasmine() so that it expects calls generated to step definitions to be from a namespace bound by the feature's name (or in general with the enclosing container)
   currently two steps with the same name in 2 features or scenarios will clash with each other. - DONE
 * check jasmine code for style and idioms
