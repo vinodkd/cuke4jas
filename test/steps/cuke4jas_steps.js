@@ -5,7 +5,7 @@ test_basic_cuke_spec.basic_cuke_spec = function(){
   cukescript1='Feature: Convert cuke spec to jasmine template \r\n  Scenario: Test basic cuke spec \r\nGiven basic cuke spec\r\nWhen I convert it using cuke4jas\r\nThen I should see jasmine template 1\r\n';	
 }
 
-test_basic_cuke_spec.i_convert_it_using_cuke4jas1 = function(){
+test_basic_cuke_spec.i_convert_it_using_cuke4jas = function(){
   actual_jasscript1=cuke4jas.toJasmine(cukescript1);
   // not the best possible way, but the easiest to debug string output similarity.
   //alert(actual_jasscript1);
@@ -30,7 +30,7 @@ outp += str.charAt(i) + ',';
 test_cuke_spec_with_step_definitions.a_cuke_spec_with_step_definitions = function(){
   cukescript2='Feature: Convert cuke spec to jasmine template \n Scenario: Test cuke spec with step definitions\nGiven A cuke spec with step definitions\nWhen I convert it using cuke4jas\nThen I should see a jasmine template with step definitions\n';	
 }
-test_cuke_spec_with_step_definitions.i_convert_it_using_cuke4jas2 = function(){
+test_cuke_spec_with_step_definitions.i_convert_it_using_cuke4jas = function(){
   actual_jasscript2=cuke4jas.toJasmine(cukescript1,true);
   // not the best possible way, but the easiest to debug string output similarity.
   // alert(actual_jasscript1);
