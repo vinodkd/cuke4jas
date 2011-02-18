@@ -9,7 +9,7 @@ It can be used in two modes:
 
 Using cuke4jas as a tool to start off your cuke-jasmine bdd spec
 ---------------------------------------------------------------
-    convert[.bat] [-s] input.feature output.js
+    tools/convert[.bat] [-s] input.feature output.js
       -s outputs a jasmine spec that uses step definitions for the GWT steps
     
 the .bat is if you want to run the converter in windows. I've found, however, that Portable Git provides a sufficiently capable bash under Windows to negate need for this.
@@ -18,9 +18,9 @@ See test/cuke4jas-jasmine-nosteps.js and test/cuke4jas-jasmine-withsteps.js for 
     
 Using cuke4jas directly in jasmine with step definitions
 ----------------------------------------------------------
-* copy the entire contents of cuke4jas/test into your project's test folder. This will bring in jasmine, namespace and jasmine-species.
+* copy the entire contents of the cuke4jas code into your project's test folder. This will bring in jasmine, namespace and jasmine-species.
 * write your cucumber spec into test/features
-* create step definitions as javascript functions. put them in js files under test/steps.
+* create step definitions as javascript functions. put them in js files under test/features/steps.
 * use the cuke4jas specrunner.html. This does the following:
   * import jasmine
   * import namespace required by jasmine-species
@@ -31,13 +31,14 @@ Using cuke4jas directly in jasmine with step definitions
 * load up the feature file, and pass it to cuke4jas by defining a link element with the location of the feature spec as its href. 
   * it now creates a jasmine spec on the fly and maps text to functions in the steps directory similar to cucumber and executes the spec
 
-See test/features/cuke4jas.feature and test/features/steps/cuke4jas_steps.js for sample specs. This is also cuke4jas's test spec.
+See features/cuke4jas.feature and features/steps/cuke4jas_steps.js for sample specs. This is also cuke4jas's test spec.
 _
 Current Status
 --------------
 - 1/26/2011: Rudimentary Tool implemented, seems to parse sample cuke specs just fine.
 - 2/14/2011: Converter working, basic spec-based definitions tested. Major issue is that step definitions and their variables are globals. This will be the next order of things to be fixed.
 - 2/16/2011: Fixed issues with step definitions. Steps are now scoped by their scenario name, so are no longer have the global name conflict problem.
+- 2/17/2011: Moved the directory structure around to make it easier to download and "install" by copying.
 
 Todos
 -----
@@ -50,5 +51,5 @@ Todos
 * check how plugins/addons work in jasmine, and change code accordingly if required
 * create the cuke mode  - VERSION 1 DONE
 * create github project - DONE
-* contact jasmine devs and ask opinion
+* contact jasmine devs and ask opinion - DONE
 * add mode to converter to output blank step definition file. This should be real easy once the AST is in place.
