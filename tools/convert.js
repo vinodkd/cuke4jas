@@ -1,4 +1,4 @@
-load('lib/cuke4jas.js');
+load('../lib/cuke4jas.js');
 var text,addSteps;
 if(arguments[0]=='-s'){
   addSteps=true;
