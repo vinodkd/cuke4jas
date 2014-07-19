@@ -14,8 +14,9 @@
 */
 feature('Convert cuke spec to jasmine template', function(){
     beforeEach(function() {
+          alert(this.actual.description);
       this.addMatchers({
-        toHaveItems: function() { 
+        toHaveItems: function() {
             this.message = function() {
               return [
                 "Expected \"" + this.actual.description + "\" to have at least 1 validation. Add validations using matchers",
