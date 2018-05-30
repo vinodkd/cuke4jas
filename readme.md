@@ -1,6 +1,6 @@
 cuke4jas
 =========
-cuke4jas enhances [jasmine - the javascript bdd framework](http://pivotal.github.com/jasmine/) - to support cucumber-style plain text feature specifications. It should be used along with [the jasmine-species add-on to jasmine](http://rudylattae.github.com/jasmine-species/).
+cuke4jas enhances [jasmine - the javascript bdd framework](https://jasmine.github.io/) - to support cucumber-style plain text feature specifications. It should be used along with [the jasmine-species add-on to jasmine](http://rudylattae.github.com/jasmine-species/).
 
 It can be used in two modes:
 
